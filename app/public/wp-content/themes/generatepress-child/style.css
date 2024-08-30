@@ -1,0 +1,101 @@
+/*
+ Theme Name:   GeneratePress Child
+ Theme URI:    https://example.com/generatepress-child
+ Description:  Thème enfant pour GeneratePress
+ Author:       Votre Nom
+ Author URI:   https://example.com
+ Template:     generatepress
+ Version:      1.0.0
+*/
+.site-header {
+    max-width: 1200px;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff; 
+    margin: 0 auto;}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    max-height: 40px; 
+}
+
+.main-navigation {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main-navigation .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-liens {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-liens a {
+    text-decoration: none;
+    color: #000; 
+}
+
+.button-commander {
+    background-color: #e79a8d; 
+    color: #fff;
+    text-decoration: none;
+    height: 100%; 
+    display: flex;
+    align-items: center; }
+    
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#page {
+    width: 100%; 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.site-footer {
+    width: 100%;
+    background-color: #fff; 
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 18px;
+    display: block; }
