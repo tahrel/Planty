@@ -11,7 +11,7 @@
         <div class="container">
             <div class="logo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plantylogo.png" alt="Planty Logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/plantylogo.png" alt="Planty Logo">
                 </a>
             </div>
 
@@ -23,12 +23,6 @@
                 ) );
                 ?>
             </nav>
-
-            <div class="header-liens">
-                <a href="#">Nous rencontrer</a>
-                <a href="#">Admin</a>
-                <a href="#" class="button-commander">Commander</a>
-            </div>
         </div>
     </header>
 
