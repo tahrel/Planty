@@ -14,6 +14,10 @@ function add_admin_menu_item($items, $args) {
     if (is_user_logged_in() && current_user_can('administrator')) {
         // Ajoutez l'élément de menu "Admin"
         $items .= '<li><a href="' . admin_url() . '">Admin</a></li>';
+        // $items .= '<li><a href="' . admin_url() . '">Admin</a></li>' . $items;
+
+        // $items = '<li><a href="' . admin_url() . '">Admin</a></li>' . $items;
+
     }
     return $items;
 }
