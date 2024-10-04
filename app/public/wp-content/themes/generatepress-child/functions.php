@@ -9,19 +9,29 @@ function my_generatepress_child_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_generatepress_child_enqueue_scripts' );
 
+
 function add_admin_menu_item($items, $args) {
     // Vérifiez si l'utilisateur est connecté et a le rôle d'administrateur
     if (is_user_logged_in() && current_user_can('administrator')) {
-        // Ajoutez l'élément de menu "Admin"
-        $items .= '<li><a href="' . admin_url() . '">Admin</a></li>';
-        // $items .= '<li><a href="' . admin_url() . '">Admin</a></li>' . $items;
-
-        // $items = '<li><a href="' . admin_url() . '">Admin</a></li>' . $items;
-
+        // Convertir la chaîne d'éléments de menu en tableau
+        $menu_items = explode('</li>', $items); // Divise chaque item de menu
+        // Retirer les éléments vides (au cas où)
+        $menu_items = array_filter($menu_items);
+        
+        // Définir l'élément Admin
+        $admin_item = '<li><a href="' . admin_url() . '">Admin</a>';
+        
+        // Insérer l'élément Admin après le premier élément du tableau (ou à l'endroit souhaité)
+        array_splice($menu_items, 1, 0, $admin_item); // Insère après le premier élément
+        
+        // Reconstruire la chaîne HTML des éléments de menu
+        $items = implode('</li>', $menu_items) . '</li>'; // Reconstituer la liste des éléments
     }
     return $items;
 }
-
-// Utilisez le filtre 'wp_nav_menu_items' pour ajouter l'élément au menu
 add_filter('wp_nav_menu_items', 'add_admin_menu_item', 10, 2);
+
+
+
+
 

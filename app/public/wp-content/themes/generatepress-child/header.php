@@ -13,7 +13,7 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/plantylogo.png" alt="Planty Logo">
                 </a>
-            </div>
+            
 
             <nav class="main-navigation">
                 <?php
@@ -23,6 +23,7 @@
                 ) );
                 ?>
             </nav>
+        </div>
         </div>
     </header>
 
