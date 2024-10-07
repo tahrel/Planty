@@ -12,263 +12,325 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-left: 1%; 
+  margin-left: 1%;
 }
+
 
 .logo img {
   width: 150px;
-  height: auto; 
+  height: auto;
 }
 
+
+body {
+  overflow-x: hidden;
+}
+
+
+.site {
+  max-width: 100%;
+  width: 100%;
+  padding: 0; 
+  margin: 0; 
+}
+
+
+.container, .content-area, .main {
+  width: 100%; 
+  padding: 0; 
+  margin: 0;
+}
+
+.entry-content, .post {
+  padding: 0; 
+  margin: 0; 
+}
 
 
 .main-navigation {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end; 
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu a {
+  color: black;
 }
 
 .menu {
-    display: flex;
-    gap: 20px; 
-    list-style: none; 
-    margin: 0;
-    padding: 0;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-
-.menu a[href="http://planty.local/commander/"] {
-  background-color: #D2776A;
+.menu a[href="http://planty.local/commander/"]
+{
+  background-color: #dc9f96;
   color: #fff;
   padding: 10px 15px;
   height: auto;
 }
 
-
 .site-content {
-  width: 100vw; 
-  max-width: 100%; 
-  /* margin: 0 auto; 
-  padding: 20px 20px;  */
+  width: 100vw;
+  max-width: 100%;
   background-color: #ffffff;
-  box-sizing: border-box; 
-  /* margin-top: 0;
-  padding-top: 0; */
+  box-sizing: border-box;
+ 
 }
 
-
 .site-footer {
-    width: 100%;
-    background-color: #fff; 
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin-top: auto;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
 }
 
 .footer-container {
-    width: 100%; 
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer-container a {
-    text-decoration: none;
-    color: #000; 
-    font-size: 18px;
-    display: block; }
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  display: block;
+}
 
+.mentions {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #eaeaea;
+  position: relative;
+  top: -40px;
+  z-index: 10;
+}
 
-
-  .mentions {
-      width: 100%;
-      background-color: white;
-      text-align: center;
-      padding: 10px 0;
-      border-top: 1px solid #eaeaea;
-      position: relative; 
-      top: -40px; 
-      z-index: 10; 
-     
-  }
-  
 .mentions a {
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-  }
-  
-.mentions a:hover {
-      text-decoration: underline;
-  }
-  
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
 
+.mentions a:hover {
+  text-decoration: underline;
+}
 
 .image-fruits {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center; 
-        gap: 3%;
-        width: 100%;
-      }
-      
-.image-container {
-        position: relative;
-        width: 100%;
-        max-width: 394px;
-        height: auto;
-        
-      }
-      
-.image-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      
-.overlay-text {
-        position: absolute;
-        top: 50%; 
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white; 
-        font-family: 'Syne', sans-serif; 
-        font-size: 68px; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 10px 20px;
-        width: 80%; 
-        
-      }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 3%;
+  width: 100%;
+}
 
- @media (max-width: 600px) {
-        .image-fruits {
-          grid-template-columns: 1fr; 
-        }
-      
-        .overlay-text {
-          font-size: 36px; 
-     }
-      }
-      
-      
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 394px;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Syne", sans-serif;
+  font-size: 68px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  width: 82%;
+}
+
+@media (max-width: 600px) {
+  .image-fruits {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay-text {
+    font-size: 36px;
+  }
+}
+
 @media (max-width: 768px) {
-        .image-fruits {
-          grid-template-columns: 1fr 1fr;
-        }
-      
-        .overlay-text {
-          font-size: 48px; 
-        }
-      }
+  .image-fruits {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .overlay-text {
+    font-size: 48px;
+  }
+}
 
 .wpcf7-submit {
-    background-color:#E0B9B4 ;
+  background-color: #e0b9b4;
+  align-items: center;
 }
-button, input[type=button], input[type=reset], input[type=submit] {
-    background-color:#E0B9B4 ;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #e0b9b4;
+  border-radius: 4%;
+
 }
-
-
 
 .form-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; 
-    margin: 0 auto; 
-    max-width: 900px;
-    padding: 20px; 
-    background-color: #3B8E46;
-  }
-  
-  .information {
-    flex: 1;
-    min-width: 45%;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 3%;
+  background-color: #3b8e46;
+  color: white;
+}
 
-  .information.wpcf7-form-control {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
+.information {
+  flex: 1;
+  min-width: 45%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  .commander {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .information .commander {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+.information.wpcf7-form-control {
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
 
-  .information:nth-child(1) {
-    border-right: 1px solid yellow;  /* nth-child(1) signifie le premier element qui a la classe  */
-    align-items: center;
-      } 
+.commander {
+  text-align: center;
+  margin-top: 20px;
+}
 
+h1#haut {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
 
-/* .image-footer {
-   width: 100%; 
-   height: 200px; 
-   background-image: url('http://planty.local/wp-content/uploads/2024/09/Planty5-2.png');
-   background-repeat: repeat-x; 
-   background-size: calc(100% / 16);
-   background-position: top center; 
-    }
-       */
- 
+h4#haut1 {
+  margin-bottom: 0 !important;
+  padding-left: 25%;
+}
+
+h1#haut::after {
+  content: ""; 
+  position: absolute;
+  margin-top: 4%;
+  left: 25%;
+  right: 25%;
+  height: 1px; 
+  background-color: white; 
+}
+
+h4#haut1::after {
+  content: ""; 
+  position: absolute;
+  margin-top: 16%;
+  left: 25%;
+  right: 25%;
+  height: 1px; 
+  background-color: white; 
+}
+
+.information .commander {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* .information:nth-child(1),
+  .information:nth-child(2) {
+      width: 50%;
+      box-sizing: border-box;
+  } */
+
+/* .information:nth-child(1) {
+      border-right: 2px solid white; /* Ajoute une ligne blanche de 2px d'épaisseur à droite */
+
 .entry-header {
   display: none;
 }
 
+.grid-container {
+  width: 100%;
+  max-width: 100%;
+}
+.container-grid-container {
+  width: 100%;
+}
 
-.grid-container { width: 100%; max-width: 100%;}
-.container-grid-container { width: 100%;}
+.separate-containers .comments-area,
+.separate-containers .inside-article,
+.separate-containers .page-header,
+.separate-containers .paging-navigation {
+  padding: 0px;
+}
 
+.separate-containers .site-main {
+  margin: 0px;
+}
 
-
+.entry-content:not(:first-child),
+.entry-summary:not(:first-child),
+.page-content:not(:first-child) {
+  margin-top: 0px;
+}
 
 .image-commande {
   display: flex;
-  justify-content: center; 
-  flex-wrap: wrap; 
-  gap: 20px; 
-  max-width: 100%; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 100%;
   margin: 0 auto;
-  background-color: #3B8E46; }
+  background-color: #3b8e46;
+}
 
 .image-compte {
   position: relative;
   width: 12%;
   min-width: 150px;
-  
 }
 
 .image-compte img {
-  width: 100%; 
+  width: 100%;
   height: auto;
   display: block;
 }
 
 .overlay-command {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  color: white; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   font-family: syne;
   font-size: 2.5em;
-  font-weight: bold; /* Met le texte en gras */
-  z-index: 10; /* Assure que le texte est au-dessus de l'image */
+  font-weight: bold;
+  z-index: 10; 
   max-width: 90%;
   text-align: center;
 }
@@ -284,33 +346,35 @@ input[type="number"] {
   text-align: center;
 }
 
-
 .custom-footer {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: flex-end;
-  height: 333px; /* LA SOLUTION */
-  background-color: #f1f1f1; 
+  height: 350px; 
   padding: 0;
   margin: 0;
-  width: 100%; 
-  overflow: hidden; 
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.specific-footer-background {
+  background-color: #f3e0f2;
+ 
 }
 
 .canette-container {
   position: relative;
-  width: 100%; 
-  height: 100%; 
-  /* margin: 0 10px;  */
-  background-color: transparent;
+  width: 100%;
+  height: 100%;
 }
 
 .canette-container::before {
   content: "";
-  background-image: url('http://planty.local/wp-content/uploads/2024/09/Planty6-1.png'); 
-  background-size: cover; 
+  background-image: url("http://planty.local/wp-content/uploads/2024/09/Planty6-1.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom; 
+  background-position: center bottom;
   position: absolute;
   top: 0;
   left: 0;
@@ -318,47 +382,14 @@ input[type="number"] {
   height: 100%;
 }
 
-.canette-full,
-.canette-half,
+.canette-full {
+  transform: translateY(30%);
+}
+
+.canette-half {
+  transform: translateY(40%);
+}
+
 .canette-hidden {
-  width: 100%; 
-  height: 100%; 
-  position: relative;
+  transform: translateY(50%);
 }
-
-
-
-
-
-
-
-/* .custom-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 15%;
-  background-color: #fff; 
-  gap:1px;
-  
-}
-
-.canette {
-  background-image: url('http://planty.local/wp-content/uploads/2024/09/canette.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 5.68%; 
-} */
-
-/* Hauteurs des canettes */
-.height-1 {
-  height: 130px;
-}
-
-.height-2 {
-  height: 110px; 
-}
-
-.height-3 {
-  height: 90px; 
-}
-

@@ -13,55 +13,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <footer class="site-footer">
     <div class="footer-container">
-</footer>
+
 
     <?php
 if (is_page('accueil')) {
-    // Contenu spécifique pour la page "about"
+
     echo '<footer class="custom-footer">
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-</footer>
-';
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+    <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+    <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <!-- Ajoute plus de canettes si nécessaire -->
+</footer>';
+    
+
+
 } elseif (is_page('nous-rencontrer')) {
-    // Contenu spécifique pour la page "contact"
+   
     echo '<footer class="custom-footer">
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-1"></div>
-    <div class="canette height-2"></div>
-    <div class="canette height-3"></div>
-    <div class="canette height-2"></div>
+    <footer class="custom-footer specific-footer-background"> 
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+    <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+    <div class="canette-container canette-hidden"></div>
+  <div class="canette-container canette-full"></div>
+  <div class="canette-container canette-half"></div>
+  <div class="canette-container canette-hidden"></div>
+  <!-- Ajoute plus de canettes si nécessaire -->
 </footer>';
 }
 ?>
-<a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>">Mentions légales</a>
-    </div>
+</div>
+<div class="mentions">
+<a href="<?php echo esc_url( home_url( 'http://planty.local/mentions-legales' ) ); ?>">Mentions légales</a>
+</div>
+
+</div>
 </footer>
+
 
 <?php wp_footer(); ?>
 
