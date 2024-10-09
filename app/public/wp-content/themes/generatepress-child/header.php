@@ -6,7 +6,7 @@
 </head>
 <body <?php body_class(); ?> <?php generate_do_microdata( 'body' ); ?>>
     <?php do_action( 'wp_body_open' ); ?>
-
+     <!-- mis a jour -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -31,3 +31,4 @@
         <?php do_action( 'generate_inside_site_container' ); ?>
         <div <?php generate_do_attr( 'site-content' ); ?>>
             <?php do_action( 'generate_inside_container' ); ?>
+        

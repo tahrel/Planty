@@ -17,53 +17,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <?php
 if (is_page('accueil')) {
-
-    echo '<footer class="custom-footer">
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-    <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-    <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <!-- Ajoute plus de canettes si nécessaire -->
-</footer>';
-    
-
-
+    echo '<footer class="custom-footer" style="background-image: url(\'http://planty.local/wp-content/uploads/2024/10/Mask-group-8.png\');">
+    </footer>';
 } elseif (is_page('nous-rencontrer')) {
-   
-    echo '<footer class="custom-footer">
-    <footer class="custom-footer specific-footer-background"> 
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-    <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-    <div class="canette-container canette-hidden"></div>
-  <div class="canette-container canette-full"></div>
-  <div class="canette-container canette-half"></div>
-  <div class="canette-container canette-hidden"></div>
-  <!-- Ajoute plus de canettes si nécessaire -->
-</footer>';
+    echo '<footer class="custom-footer nous-rencontrer">
+    </footer>';  
 }
 ?>
+
+
+
 </div>
 <div class="mentions">
 <a href="<?php echo esc_url( home_url( 'http://planty.local/mentions-legales' ) ); ?>">Mentions légales</a>

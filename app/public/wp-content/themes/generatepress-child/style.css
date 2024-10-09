@@ -17,7 +17,7 @@
 
 
 .logo img {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 
@@ -47,32 +47,74 @@ body {
 }
 
 
+
 .main-navigation {
-  flex-grow: 1;
+  flex-grow: 0;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
+
+@media (max-width: 768px) {
+  .main-navigation {
+      display: flex !important; 
+      justify-content: space-between; 
+      flex-wrap: nowrap; 
+  }
+  
+  .main-navigation ul {
+      display: flex !important;
+      padding: 0; 
+      margin: 0;
+      list-style: none; 
+  }
+
+  .main-navigation ul li {
+      display: inline !important; 
+      margin-right: 20px; 
+  }
+
+  
+  .main-navigation ul li:last-child {
+      margin-right: 0; 
+  }
+}
+
 
 .menu a {
   color: black;
 }
 
+
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center; 
+  height: 90px;
+
+}
+
+
+.menu a {
+  font-size: 18px; 
+  padding: 10px 15px; 
+  height: 100%; 
+  display: flex; 
   align-items: center;
 }
 
-.menu a[href="http://planty.local/commander/"]
-{
+.menu a[href="http://planty.local/commander/"] {
   background-color: #dc9f96;
   color: #fff;
-  padding: 10px 15px;
-  height: auto;
+  height: 90px;
+ width: 200px;
+ display: flex;            
+ align-items: center;     
+ justify-content: center;  
+ text-align: center;       
 }
+
 
 .site-content {
   width: 100vw;
@@ -83,7 +125,9 @@ body {
 }
 
 
-.elementor-31 .elementor-element.elementor-element-83bd232 > .elementor-widget-container {
+.elementor-31 .elementor-element
+.elementor-element-83bd232 > 
+.elementor-widget-container {
   display: flex;                
   justify-content: center;       
   align-items: center;          
@@ -106,10 +150,7 @@ body {
   margin-top: auto;
 }
 
-.footer-container {
-  width: 100%;
-  margin: 0 auto;
-}
+
 
 .footer-container a {
   text-decoration: none;
@@ -125,8 +166,7 @@ body {
   padding: 10px 0;
   border-top: 1px solid #eaeaea;
   position: relative;
-  top: -40px;
-  z-index: 10;
+ 
 }
 
 .mentions a {
@@ -166,33 +206,40 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-family: "Syne", sans-serif;
-  font-size: 68px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px 20px;
-  width: 82%;
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5vw; 
+  font-weight: bold;
+  z-index: 10;
+  max-width: 90%; 
+  text-align: center; 
+  
 }
 
-@media (max-width: 600px) {
-  .image-fruits {
-    grid-template-columns: 1fr;
-  }
 
+@media (max-width: 1200px) {
   .overlay-text {
-    font-size: 36px;
+    font-size: 3.5vw; 
+  }
+}
+
+@media (max-width: 992px) {
+  .overlay-text {
+    font-size: 4.5vw; 
   }
 }
 
 @media (max-width: 768px) {
-  .image-fruits {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .overlay-text {
-    font-size: 48px;
+    font-size: 5.5vw; 
   }
 }
+
+@media (max-width: 576px) {
+  .overlay-text {
+    font-size: 6vw; 
+  }
+}
+
 
 
 .wpcf7-spinner {
@@ -234,6 +281,7 @@ input[type="submit"] :nth-of-type(1) {
   padding: 3%;
   background-color: #3b8e46;
   color: white;
+  margin-top: 3%;
 }
 
 .information {
@@ -245,12 +293,13 @@ input[type="submit"] :nth-of-type(1) {
 }
 
 .information:first-child {
+  position: relative;
   border-right: 1px solid white; 
-  margin-left: 20px; 
+  margin-left: 2%; 
 }
 
 .information:last-child {
-  margin-right: 20px; 
+  margin-right: 2%; 
 }
 
 
@@ -275,25 +324,54 @@ h4#haut1 {
   padding-left: 25%;
 }
 
+h1#haut {
+  position: relative; 
+}
+
 h1#haut::after {
   content: ""; 
   position: absolute;
-  margin-top: 4%;
-  left: 25%;
-  right: 25%;
+  top: 80%;
+  left: 25%; 
+  right: 25%; 
   height: 1px; 
   background-color: white; 
+  width: 50%; 
 }
 
-h4#haut1::after {
+.form-info {
+  position: relative; 
+}
+
+.form-info::after {
   content: ""; 
   position: absolute;
-  margin-top: 16%;
-  left: 25%;
-  right: 25%;
+  top: 0%; 
+  left: 50%; 
+  transform: translateX(-50%); 
   height: 1px; 
   background-color: white; 
+  width: 110%; 
+  
 }
+
+
+
+@media (max-width: 768px) {
+  .form-info::after {
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .form-info::after {
+    width: 60%; 
+  }
+}
+
+
+
 
 .information .commander {
   padding: 10px 20px;
@@ -355,17 +433,21 @@ h4#haut1::after {
 
 .overlay-command {
   position: absolute;
-  top: 40%; 
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-family: 'Syne', sans-serif;
-  font-size: 2.5em;
+  font-size:160%;
   font-weight: bold;
   z-index: 10;
-  max-width: 90%;
-  text-align: center;
+  max-width: 100%; 
+  text-align: center; 
+  
+  overflow: hidden; 
+ 
 }
+
 
 
 .compteur-container {
@@ -379,50 +461,18 @@ input[type="number"] {
   text-align: center;
 }
 
+
+
 .custom-footer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 350px; 
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.specific-footer-background {
-  background-color: #f3e0f2;
- 
-}
-
-.canette-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.canette-container::before {
-  content: "";
-  background-image: url("http://planty.local/wp-content/uploads/2024/09/Planty6-1.png");
+  background-image: url('http://planty.local/wp-content/uploads/2024/10/Mask-group-8.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  background-position: center; 
+  height:200px;
 }
 
-.canette-full {
-  transform: translateY(30%);
+
+
+.custom-footer.nous-rencontrer {
+  background-color: #ECE2DA; 
 }
 
-.canette-half {
-  transform: translateY(40%);
-}
-
-.canette-hidden {
-  transform: translateY(50%);
-}

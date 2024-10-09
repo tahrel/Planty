@@ -19,7 +19,7 @@ function add_admin_menu_item($items, $args) {
         $menu_items = explode('</li>', $items); 
         $menu_items = array_filter($menu_items);
         
-        // Définir l'élément Admin
+        
         $admin_item = '<li><a href="' . admin_url() . '">Admin</a>';
         
         
